@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #4285f4 0%, #34a853 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .skill-bar { transition: width 1s ease-in-out; }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="mb-8 animate-float">
+                <div class="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center text-6xl shadow-2xl">
+                    👨‍💻
+                </div>
+            </div>
+            <h1 class="text-5xl font-bold mb-4">Alex Johnson</h1>
+            <p class="text-xl mb-6 opacity-90">Full Stack Developer & UI/UX Designer</p>
+            <p class="text-lg max-w-2xl mx-auto mb-8 opacity-80">
+                Passionate about creating beautiful, functional digital experiences that make a difference. 
+                I love turning complex problems into simple, elegant solutions.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="scrollToSection('about')" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    Learn More
+                </button>
+                <button onclick="scrollToSection('contact')" class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    Get In Touch
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">My Story</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        With over 5 years of experience in web development, I've had the privilege of working with 
+                        startups and established companies to bring their digital visions to life. My journey began 
+                        with a curiosity about how websites work, and it's evolved into a passion for creating 
+                        seamless user experiences.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
+                        projects, or enjoying a good cup of coffee while sketching out my next big idea.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Quick Facts</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-4">📍</span>
+                            <span class="text-gray-600">San Francisco, CA</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-4">🎓</span>
+                            <span class="text-gray-600">Computer Science, Stanford University</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-4">💼</span>
+                            <span class="text-gray-600">5+ Years Experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-4">🌟</span>
+                            <span class="text-gray-600">50+ Projects Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Skills & Expertise</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-8 text-gray-800">Technical Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">JavaScript / TypeScript</span>
+                                <span class="text-gray-600">95%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-gradient-to-r from-blue-500 to-green-500 h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">React / Next.js</span>
+                                <span class="text-gray-600">90%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-gradient-to-r from-green-500 to-blue-500 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Node.js / Python</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-gradient-to-r from-yellow-500 to-red-500 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">UI/UX Design</span>
+                                <span class="text-gray-600">80%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-gradient-to-r from-blue-500 to-green-500 h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-8 text-gray-800">Tools & Technologies</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                            <div class="text-3xl mb-2">⚛️</div>
+                            <span class="font-medium text-gray-700">React</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                            <div class="text-3xl mb-2">🟢</div>
+                            <span class="font-medium text-gray-700">Node.js</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                            <div class="text-3xl mb-2">🐍</div>
+                            <span class="font-medium text-gray-700">Python</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                            <div class="text-3xl mb-2">🎨</div>
+                            <span class="font-medium text-gray-700">Figma</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                            <div class="text-3xl mb-2">☁️</div>
+                            <span class="font-medium text-gray-700">AWS</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                            <div class="text-3xl mb-2">🐳</div>
+                            <span class="font-medium text-gray-700">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Featured Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center">
+                        <span class="text-6xl">🚀</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">A full-stack e-commerce solution with React, Node.js, and Stripe integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <button class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">View Project →</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-yellow-500 flex items-center justify-center">
+                        <span class="text-6xl">📱</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Task Management App</h3>
+                        <p class="text-gray-600 mb-4">A collaborative task management tool with real-time updates and team features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Next.js</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Socket.io</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Redis</span>
+                        </div>
+                        <button class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">View Project →</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-yellow-500 flex items-center justify-center">
+                        <span class="text-6xl">🎨</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Design System</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive design system and component library for consistent UI development.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Storybook</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
+                        </div>
+                        <button class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">View Project →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-gray-800">Let's Work Together</h2>
+            <p class="text-xl text-gray-600 mb-12">
+                I'm always excited to take on new challenges and collaborate on interesting projects. 
+                Let's create something amazing together!
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="p-6">
+                    <div class="text-4xl mb-4">📧</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Email</h3>
+                    <p class="text-gray-600">alex@example.com</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">LinkedIn</h3>
+                    <p class="text-gray-600">linkedin.com/in/alexjohnson</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl mb-4">🐙</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">GitHub</h3>
+                    <p class="text-gray-600">github.com/alexjohnson</p>
+                </div>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-2xl">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800">Send Me a Message</h3>
+                <p class="text-gray-600 mb-4">This is a demo contact form. In a real implementation, this would connect to a backend service.</p>
+                <form class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Your Name" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                        <input type="email" placeholder="Your Email" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                    </div>
+                    <input type="text" placeholder="Subject" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                    <textarea placeholder="Your Message" rows="5" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"></textarea>
+                    <button type="submit" class="gradient-bg text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400">© 2024 Alex Johnson. Made with ❤️ and lots of coffee.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Animate skill bars when they come into view
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        bar.style.width = bar.style.width || '0%';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe the skills section
+        const skillsSection = document.querySelector('#about').nextElementSibling;
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! This is a demo form, so your message wasn\'t actually sent.');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9791d3a3f1ce4cda',t:'MTc1Njg2NjY0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
